@@ -296,14 +296,17 @@ a:hover{
 .news-image-container{
     display: flex !important;
     justify-content: space-between !important;
+
+    
 }
 .news-title{
 width: 70%;
 }
 
 .news-image-container .img{
-    width:100px;
-    height:100px;
+    width: 80px;
+    height:80px;
+    object-fit: contain;
 }
 .news-card p{
     color: black;
