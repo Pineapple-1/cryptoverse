@@ -13,7 +13,7 @@ const News = ({ simplified }) => {
   const { data: cryptos} = useGetCryptosQuery(100);
   const { data, isFetching } = useGetNewsQuery({
     newsCategory,
-    count: simplified ? 7 : 13,
+    count: simplified ? 6 : 12,
   });
   console.log(data);
 
