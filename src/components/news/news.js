@@ -3,7 +3,7 @@ import { Row, Col, Card, Select, Typography, Avatar } from "antd";
 import moment from "moment";
 import { useGetNewsQuery } from "../../services/newsApi";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
-
+import Loader from "../loader/loader";
 const { Title, Text } = Typography;
 const { Option } = Select;
 const demoImage =
@@ -17,7 +17,7 @@ const News = ({ simplified }) => {
   });
   console.log(data);
 
-  if (isFetching) return "loading..";
+  if (isFetching) return <Loader/>;
   return (
     <Row gutter={[24, 24]}>
       {!simplified && (

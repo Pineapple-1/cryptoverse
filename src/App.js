@@ -12,6 +12,7 @@ import {
 
 function App() {
   return (
+    <>
     <div className="app">
       <div className="navbar">
         <Navbar />
@@ -55,6 +56,7 @@ function App() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

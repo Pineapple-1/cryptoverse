@@ -5,6 +5,8 @@ import millify from "millify";
 import { useGetCryptosDetailQuery,useGetCryptoHistoryQuery } from "../../services/cryptoApi";
 import { Col, Row, Typography, Select } from "antd";
 import LineChart from "./linechart";
+import Loader from  '../loader/loader'
+
 import {
   MoneyCollectOutlined,
   DollarCircleOutlined,
@@ -28,7 +30,7 @@ const CryptoDetails = () => {
   console.log(data);
   const cryptoDetails = data?.data?.coin;
 
-  if (isFetching) return "loading....";
+  if (isFetching) return <Loader/>;
   const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
 
   const stats = [
